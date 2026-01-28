@@ -9,6 +9,7 @@ export const interceptingHook = (router) => {
 
 	const wrappedNavigate = (...args) => {
 		hypotheticalRouterGlobalState.currentNavigateOptions = args[1] ?? {}
+		//@ts-ignore
 		navigate(...args)
 	}
 
